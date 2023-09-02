@@ -282,9 +282,24 @@ sudo unzip $openFolder
 sudo rm $openFolder
 
 pwd
-
+openConf="$(pwd)"
 cd ..
 cd vpnserver
+
+cd ..
+echo -e "------------ CREATING DETAILS.TXT ------------"
+echo -e
+
+dataFile="details.txt"
+sudo echo "Privilage user pwsd : $PASSWORD" > $dataFile
+
+sudo echo -e "User : $MAIN_USER" >> $dataFile
+sudo echo -e "User pswd : $MAIN_PSWD" >> $dataFile
+sudo echo -e "Port : $PORT" >> $dataFile
+sudo echo -e "HUB : $HUB" >> $dataFile
+sudo echo -e "Openvpn port :  1194" >> $dataFile
+sudo echo -e "OpenVpnconfigurations : $openConf" >> $dataFile
+
 
 
 echo -e "----- SUCCESSFULLY INSTALLED --------"

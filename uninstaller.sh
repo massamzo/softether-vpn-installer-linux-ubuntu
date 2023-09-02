@@ -41,3 +41,5 @@ cd /etc/systemd/system
 sudo rm softether-vpnserver.service
 
 echo -e "---------- SUCCESSFULLY DELETED -----------"
+
+
