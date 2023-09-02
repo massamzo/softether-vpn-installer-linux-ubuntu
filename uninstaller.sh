@@ -16,7 +16,18 @@ ufw reload
 cd $INSTALLATION_PATH
 cd vpnserver
 
+sudo ./vpnserver start
+sleep 1
 sudo ./vpnserver stop
+
+
+
+
+echo -e "----------- stopping the service ----------"
+
+sudo systemctl stop softether-vpnserver 
+sudo systemctl disable softether-vpnserver
+sudo systemctl daemon-reload
 
 
 #deleting the folder 
@@ -24,5 +35,9 @@ cd ..
 cd ..
 
 sudo rm -r $INSTALLATION_PATH
+
+#deleteing the service file
+cd /etc/systemd/system
+sudo rm softether-vpnserver.service
 
 echo -e "---------- SUCCESSFULLY DELETED -----------"
