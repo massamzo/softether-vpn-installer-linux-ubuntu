@@ -73,9 +73,7 @@ install_make () {
 
 open_ports () {
 
-    sudo ufw allow 80,443,992,1194,5555/tcp
     sudo ufw allow 80,443,992,1194,5555/udp
-    sudo ufw allow 1194,51612,53400,56452,40085/udp
 
     #update firewall
     ufw reload
