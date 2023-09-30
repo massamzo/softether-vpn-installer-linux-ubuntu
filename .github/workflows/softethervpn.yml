@@ -40,4 +40,12 @@ jobs:
           # A file, directory or wildcard pattern that describes what to upload
           path: softetherVpn.deb
           # The desired behavior if no files are found using the provided path.
+
+      - name: Download a Build Artifact
+        uses: actions/download-artifact@v2.1.1
+        with: 
+          # Artifact name
+          name: softetherVpn.deb
+          # Destination path
+          path: softetherVpn.deb
   
