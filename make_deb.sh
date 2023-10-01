@@ -64,3 +64,5 @@ sudo dpkg --build "$DEB_NAME"
 sudo rm -r "$DEB_NAME"
 
 echo "DEB CREATED SUCCESSFULLY"
+
+echo "$DEB_NAME.deb"
