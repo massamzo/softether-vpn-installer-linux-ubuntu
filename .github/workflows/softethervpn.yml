@@ -31,12 +31,12 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: creating Deb
         id: debCreator
-        run: ./make_deb.sh
+        run: ./make_deb.sh >> $GITHUB_OUTPUT
 
 
 
       - name : tryial
-        run: echo ${{ steps.debCreator.outputs }}
+        run: echo ${{ steps.debCreator.outputs.name }}
 
         
       - name: Upload a Build Artifact
