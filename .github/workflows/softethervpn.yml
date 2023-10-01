@@ -33,11 +33,13 @@ jobs:
         id: debCreator
         run: ./make_deb.sh 
 
-
+      - name: trial1
+        id: test
+        run: echo "hello"
 
       - name : tryial
         run: |
-           echo "The output of the debCreator script is: ${{ steps.debCreator.outputs.stdout }}"
+           echo "The output of the debCreator script is: ${{ steps.test.outputs.stdout }}"
         
       - name: Upload a Build Artifact
         uses: actions/upload-artifact@v3.1.3
