@@ -36,7 +36,7 @@ jobs:
 
 
       - name : tryial
-        run: ${{ steps.debCreator.outputs.stdout }}
+        run: echo ${{ steps.debCreator.outputs.stdout }}
 
         
       - name: Upload a Build Artifact
